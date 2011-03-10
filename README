@@ -1,1 +1,4 @@
 Follow the steps for installing a plugin as they are described at http://pkp.sfu.ca/ojs/
+
+It may be beneficial to create a tar.gz of this plugin and use the web tool for installing it.  
+Otherwise, you will need to insert the correct reference into the versions table.
