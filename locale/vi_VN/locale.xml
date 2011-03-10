@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Statistics Aggregation plugin localization strings for the vi_VN (Tiếng Việt) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="vi_VN" full_name="Tiếng Việt">
+
+	<!-- Statistics Aggregation -->
+	<message key="plugins.generic.statisticsAggregation.displayName">Công cụ Analytics Plugin</message>
+	<message key="plugins.generic.statisticsAggregation.description"><![CDATA[Tích hợp OJS với Statistics Aggregation, công cụ phân tích lưu lượng truy cập web của Google. Đòi hỏi bạn đã có một tài khoản Statistics Aggregation. Xem website <a href="http://www.google.com/analytics/" title="Statistics Aggregation site">Statistics Aggregation</a> để biết thêm chi tiết.]]></message>
+
+	<!-- Statistics Aggregation Settings Management -->
+	<message key="plugins.generic.statisticsAggregation.manager.settings">Tham số thiết lập</message>
+	<message key="plugins.generic.statisticsAggregation.manager.statisticsAggregationSettings">Tham số Statistics Aggregation</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.description"><![CDATA[<p>Với công cụ này được kích hoạt,Statistics Aggregation có thể sử dụng để thu thập và phân tích lưu lượng truy câp và sử dụng của tạp chí này. Lưu ý là công cụ này đòi hỏi quý vị đã có sẵn tài khoản Statistics Aggregation. Xem website <a href="http://www.google.com/analytics/" title="Statistics Aggregation site">Statistics Aggregation site</a> để biết thêm chi tiết.</p><p>Lưu ý là có thể phải mất 24h để Statistics Aggregation để bắt đầu thu thập và phân tích sử liệu. Trong thời gian đó nút  'Check Status' có thể thông báo không chính xác xem nó đã tìm được mã theo dõi dành cho tạp chí hay chưa.</p>]]></message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteId">Số tài khoản</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdInstructions">Trong Statistics Aggregation, nhấp chuột vào nút 'Check Status' để xem mã theo dõi cho website của bạn. Đối với mã theo dõi cũ, số tài khoản được hiển thị trong code như sau: _uacct = "###". Đối với mã theo dõi mới, số tài khoản được hiển thị trong code như sau: var pageTracker = _gat._getTracker("###"). Nhập phần chữ tương ứng với ###.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdRequired">Vui lòng nhập số tài khoản</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCode">Mã theo dõi</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCodeRequired">Vui lòng chọn một loại mã theo dõi để sử dụng.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.urchin">Mã theo dõi cũ (urchin.js)</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.ga">Mã theo dõi mới (ga.js)</message>
+</locale>

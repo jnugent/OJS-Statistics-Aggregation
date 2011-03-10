@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Statistics Aggregation plugin localization strings for the fr_CA (Français (Canada)) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="fr_CA" full_name="Français (Canada)">
+
+	<!-- Statistics Aggregation -->
+	<message key="plugins.generic.statisticsAggregation.displayName">Plugiciel Statistics Aggregation</message>
+	<message key="plugins.generic.statisticsAggregation.description"><![CDATA[Intégrez OJS à Statistics Aggregation, l’application d'analyse de trafic sur le site Web de Google. Vous devez avoir un compte Statistics Aggregation pour utiliser cette application. Veuillez consulter le <a href="http://www.google.com/analytics/" title="Statistics Aggregation site">site Statistics Aggregation </a> pour de plus amples renseignements.]]></message>
+
+	<!-- Statistics Aggregation Settings Management -->
+	<message key="plugins.generic.statisticsAggregation.manager.settings">Paramètres</message>
+	<message key="plugins.generic.statisticsAggregation.manager.statisticsAggregationSettings">Paramètres de Statistics Aggregation</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.description"><![CDATA[<p> Au moyen de ce plugiciel, vous pouvez utiliser Statistics Aggregation pour collecter et analyser l'utilisation et le trafic sur ce site Web pour cette revue. Veuillez noter que pour utiliser ce plugiciel, vous devez déjà avoir un compte Statistics Aggregation. Veuillez consulter le <a href="http://www.google.com/analytics/" title="Statistics Aggregation site">site Statistics Aggregation </a> pour de plus amples renseignements.</p><p>Veuillez noter que Statistics Aggregation peut nécessiter jusqu'à 24 heures avant que les statistiques soient colligées et analysées. Durant cette période, la fonction 'Vérifier l'état' peut ne pas indiquer correctement s'il a détecter le code de repérage de la revue.</p>]]></message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteId">Numéro de compte</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdInstructions">À partir de Statistics Aggregation, cliquez sur Vérifier l'état pour voir le code de repérage de votre site. Le numéro de compte est affiché dans le code de repérage : _uacct = "###". Pour un nouveau code de repérage, le numéro de compte est affiché dans le code de repérage : var pageTracker = _gat._getTracker("###"). Entrez le texte correspondant à ###.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdRequired">Veuillez entrer un numéro de compte.</message>
+
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCode">Code de repérage</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCodeRequired">Prière de sélectionner le code de repérage à utiliser.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.urchin">Code de repérage patrimonial (urchin.js)</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.ga">Nouveau code de repérage (ga.js)</message>
+</locale>

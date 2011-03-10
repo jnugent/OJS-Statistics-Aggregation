@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Statistics Aggregation plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- Statistics Aggregation -->
+	<message key="plugins.generic.statisticsAggregation.displayName">Statistics Aggregation Plugin</message>
+	<message key="plugins.generic.statisticsAggregation.description"><![CDATA[Integrate OJS with Statistics Aggregation.]]></message>
+
+	<!-- Statistics Aggregation Settings Management -->
+	<message key="plugins.generic.statisticsAggregation.manager.settings">Settings</message>
+	<message key="plugins.generic.statisticsAggregation.manager.statisticsAggregationSettings">Statistics Aggregation Settings</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.description"><![CDATA[<p>With this plugin enabled Statistics Aggregation may be used to collect and analyze web site usage and traffic for this journal. </p>]]>
+</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteId">Account number</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmail">Account Email (for your login)</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdRequired">Please enter an account number.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmailRequired">Please enter an email address.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCode">Tracking code</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.getButtonLabel">Get number</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCodeRequired">Please select a tracking code to use.</message>
+	<message key="plugins.generic.statisticsAggregation.authorAccount">Statistics Aggregation account number</message>
+	<message key="plugins.generic.statisticsAggregation.authorAccount.description">To track published article readership using Statistics Aggregation, enter an account number here (e.g. UA-xxxxxx-x).</message>
+	<message key="plugins.generic.statisticsAggregation.authorAccountInvalid">One or more Statistics Aggregation account numbers entered for submission authors are not valid.</message>
+</locale>

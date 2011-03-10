@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Statistics Aggregation plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="eu_ES" full_name="Euskara">
+
+	<!-- Statistics Aggregation -->
+	<message key="plugins.generic.statisticsAggregation.displayName">Statistics Aggregation Plugina</message>
+	<message key="plugins.generic.statisticsAggregation.description"><![CDATA[Integratu OJS Statistics Aggregation-ekin, Google-n webguneen trafikoa analizatzeko aplikazioarekin. Statistics Aggregation kontua edukitzea eskatzen du. Informazio gehiago <a href="http://www.google.com/analytics/" title="Statistics Aggregation site">Statistics Aggregation-en gunean</a>.]]></message>
+
+	<!-- Statistics Aggregation Settings Management -->
+	<message key="plugins.generic.statisticsAggregation.manager.settings">Ezarpenak</message>
+	<message key="plugins.generic.statisticsAggregation.manager.statisticsAggregationSettings">Statistics Aggregation-en ezarpenak</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.description"><![CDATA[<p>Plugin hau gaituz gero, Statistics Aggregation erabili ahal izango da aldizkari honen webgunearen erabilera eta trafikoa jaso eta analizatzeko. Kontuan izan Statistics Aggregation-en kontua edukitzea eskatzen duela. Informazio gehiago <a href="http://www.google.com/analytics/" title="Statistics Aggregation site">Statistics Aggregation-en gunean</a>.</p><p>Gogoan izan Statistics Aggregation-ek 24 ordu ere behar izan ditzakeela estatistikak bildu eta txostena prestatzeko. Denbora horretan, ''Egiaztatu egoera" funtzioa ez da oso zehatza izango aldizkariaren segimendu-kodea detektatu duen ala ez adierazten.</p>]]></message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteId">Kontu-zenbakia</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdInstructions"><![CDATA[Statistics Aggregation-en, sakatu 'Egiaztatu egoera' zure gunearen segimendu-kodea ikusteko. Segimendu-kode heredatuan, kontu-zenbakia honela ikusten da: _uacct = "###". Segimendu-kode berrian, kontu-zenbakia honela ikusten da: var pageTracker = _gat._getTracker("###"). Idatzi ### kateri dagokion testua.]]></message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdRequired">Sartu kontu-zenbakia</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCode">Segimendu-kodea</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCodeRequired">Hautatu erabili nahi den segimendu-kodea</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.urchin">Segimendu-kode heredatua (urchin.js)</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.ga">Segimendu-kode berria (ga.js)</message>
+</locale>
+

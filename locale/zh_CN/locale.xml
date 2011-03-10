@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Statistics Aggregation plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.3.2.1 2009/04/08 19:43:16 asmecher Exp $
+  -->
+ 
+<locale name="zh_CN" full_name="China .PR">
+
+	<!-- Statistics Aggregation -->
+	<message key="plugins.generic.statisticsAggregation.displayName">Statistics Aggregation插件</message>
+	<message key="plugins.generic.statisticsAggregation.description"><![CDATA[OJS与Statistics Aggregation（网站流量分析应用）整合。要求你已经设置一个Statistics Aggregation帐户。请到 <a href="http://www.google.com/analytics/" title="Statistics Aggregation site">Statistics Aggregation site</a> 了解更多信息.]]></message>
+	<message key="plugins.generic.statisticsAggregation.enabled">Statistics Aggregation插件已开启。</message>
+	<message key="plugins.generic.statisticsAggregation.disabled">Statistics Aggregation插件已关闭。</message>
+
+	<!-- Statistics Aggregation Settings Management -->
+	<message key="plugins.generic.statisticsAggregation.manager.settings">设置</message>
+	<message key="plugins.generic.statisticsAggregation.manager.statisticsAggregationSettings">Statistics Aggregation 设置</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.description"><![CDATA[<p>启用了Statistics Aggregation插件,可以用来收集和分析本杂志的网站使用和流量。请注意，此插件要求你已经设置一个谷歌Analytics帐户。请参看<a href="http://www.google.com/analytics/" title="Statistics Aggregation site">Statistics Aggregation site</a> for 了解更多信息.</p><p>请注意，Statistics Aggregation 可能需要多达24日前收集的统计和报告时间。在此期间，'检查状态'功能可能无法准确地报告它是否检测到了该杂志需要跟踪代码.</p>]]></message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteId">账户号码</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdInstructions"><![CDATA[在谷歌分析，点击'检查状态'来查看网站的跟踪代码。对于旧版的跟踪代码，帐户号码是显示在跟踪代码为：_uacct = "###".对于新的跟踪代码，帐户号码是显示在跟踪代码为：var pageTracker = _gat._getTracker ("###").输入对应的###。]]></message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdRequired">请输入一个账户号码.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCode">跟踪代码</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCodeRequired">请选择一个跟踪代码使用。</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.urchin">旧版跟踪代码(urchin.js)</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.ga">新跟踪代码 (ga.js)</message>
+</locale>

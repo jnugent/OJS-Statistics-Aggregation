@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Statistics Aggregation plugin localization strings for the da_DK (Dutch) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="da_DK" full_name="Dutch">
+
+	<!-- Statistics Aggregation -->
+	<message key="plugins.generic.statisticsAggregation.displayName">Statistics Aggregation Plugin</message>
+	<message key="plugins.generic.statisticsAggregation.description"><![CDATA[Integrer OJS med Statistics Aggregation, Google's web site trafik-analyse applikation. Kræver at du allerede har oprettet en Statistics Aggregation account. Se <a href="http://www.google.com/analytics/" title="Statistics Aggregation site">Statistics Aggregation site</a> for mere information.]]></message>
+
+	<!-- Statistics Aggregation Settings Management -->
+	<message key="plugins.generic.statisticsAggregation.manager.settings">Indstillinger</message>
+	<message key="plugins.generic.statisticsAggregation.manager.statisticsAggregationSettings">Statistics Aggregation indstillinger</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.description"><![CDATA[<p>Med dette plugin aktiveret kan Statistics Aggregation bruges til at samle og analysere oplysninger om brugen af sitet for dette tidsskrift. Bemærk, at dette plugin kræver, at du allerede har oprettet en Statistics Aggregation account. Se <a href="http://www.google.com/analytics/" title="Statistics Aggregation site">Statistics Aggregation site</a> for mere  information.</p><p>Bemærk, at der kan gå op til 24 timer før Statistics Aggregation har samlet og rapporteret de statistiske data. I denne periode er det muligt, at 'Check status' funktionen ikke med sikkerhed om den har fundet den nødvendige tracking code for tidsskriftet.</p>]]></message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteId">Kontonummer</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdInstructions">Klik på 'Check status' i Statistics Aggregationfor at se dit site's tracking code. Når det gælder legacy tracking code, vises kontonummeret i tracking code som: _uacct = "###". For en ny new tracking code, vises kontonummeret i tracking code som: var pageTracker = _gat._getTracker("###"). Indtast teksten som svarer til ###.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdRequired">Indtast et kontonummer</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCode">Tracking code</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCodeRequired">Vælg en tracking code.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.urchin">Legacy tracking code (urchin.js)</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.ga">Ny tracking code (ga.js)</message>
+</locale>

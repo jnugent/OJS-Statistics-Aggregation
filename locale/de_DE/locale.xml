@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  *
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
+  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
+  
+  * $Id$
+  -->
+  
+<locale name="de_DE" full_name="German">
+
+	<!-- Statistics Aggregation -->
+	<message key="plugins.generic.statisticsAggregation.displayName">Google-Analytics-Plug-In</message>
+	<message key="plugins.generic.statisticsAggregation.description"><![CDATA[Verbinden Sie OJS mit Statistics Aggregation, der Google-Anwendung zur Nutzungsanalyse von Webseiten-Traffic. Voraussetzung ist, dass Sie bereits einen Google-Analytics-Zugang haben. Siehe <a href="http://www.google.com/analytics/" title="Statistics Aggregation site">Statistics Aggregation</a> für weitere Informationen.]]></message>
+
+	<!-- Google-Analytics-Einstellungen verwalten -->
+	<message key="plugins.generic.statisticsAggregation.manager.settings">Einstellungen</message>
+	<message key="plugins.generic.statisticsAggregation.manager.statisticsAggregationSettings">Google-Analytics-Einstellungen</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.description"><![CDATA[<p>Mit diesem Plug-In ist es möglich, Nutzung und Traffic für diese Zeitschrift zu erheben und zu analysieren. Bitte beachten Sie, dass Sie hierfür bereits einen Google-Analytics-Zugang haben müssen. Siehe <a href="http://www.google.com/analytics/" title="Statistics Aggregation site">Statistics Aggregation</a> für weitere Informationen.</p>]]></message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteId">Account-ID</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdInstructions">Klicken Sie in Statistics Aggregation auf "Check Status", um die Aufzeichnungen für Ihre Webseite einsehen zu können. Die Account-ID wird angezeigt im Code: _uacct = "###". Geben Sie den Text ein, der ### entspricht.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdRequired">Bitte geben Sie die Account-ID ein.</message>
+
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCode">Tracking-Code</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCodeRequired">Bitte wählen Sie einen Tracking-Code zur Verwendung aus.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.ga">Neuer Tracking-Code (ga.js)</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.urchin">Legacy Tracking Code (urchin.js)</message>
+</locale>

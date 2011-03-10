@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Statistics Aggregation plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- Statistics Aggregation -->
+	<message key="plugins.generic.statisticsAggregation.displayName">Модуль Statistics Aggregation</message>
+	<message key="plugins.generic.statisticsAggregation.description"><![CDATA[Интегрирует OJS с Statistics Aggregation, системой для анализа траффика компании Google. Требует наличия у Вас учетной записи в системе Statistics Aggregation. См. <a href="http://www.google.com/analytics/" title="Statistics Aggregation site">сайт Statistics Aggregation</a>.]]></message>
+
+	<!-- Statistics Aggregation Settings Management -->
+	<message key="plugins.generic.statisticsAggregation.manager.settings">Настройки</message>
+	<message key="plugins.generic.statisticsAggregation.manager.statisticsAggregationSettings">Настройки Statistics Aggregation</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.description"><![CDATA[<p>При включении этого модуля можно собирать статистику использования сайта в системе Statistics Aggregation. Требует наличия у Вас учетной записи в системе Statistics Aggregation. Для дополнительной информации см. <a href="http://www.google.com/analytics/" title="Statistics Aggregation site">сайт Statistics Aggregation</a>.</p><p>Заметьте, что Statistics Aggregation может потребоваться до 24 часов для начала сбора статистики. Во время этого периода функция 'Check Status' может не отображать правильно наличие требуемого кода на страницах журнала.</p>]]></message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteId">Номер счета</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdInstructions">Нажмите 'Check Status' в Statistics Aggregation для просмотра кода для Вашего сайта. Для старого кода номер счета можно найти в виде: _uacct = "###". Для нового кода счет находится в строке: var pageTracker = _gat._getTracker("###"). Введите текст, который соответствует ###.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdRequired">Пожалуйста введите номер счета.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCode">Код</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCodeRequired">Выберите код, который хотите использовать.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.urchin">Старый код (urchin.js)</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.ga">Новый код (ga.js)</message>
+</locale>

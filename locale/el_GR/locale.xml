@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Statistics Aggregation plugin localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+
+	<!-- Statistics Aggregation -->
+	<message key="plugins.generic.statisticsAggregation.displayName">Statistics Aggregation Plugin</message>
+	<message key="plugins.generic.statisticsAggregation.description"><![CDATA[Ενσωμματώνει το OJS με το Statistics Aggregation, την εφαρμογή για την ανάλυση της κίνησης του ιστοτόπου του Google. Απαιτεί την ύπαρξη ενός λογαριασμού στο Statistics Aggregation. Δείτε τον ιστότοπο του <a href="http://www.google.com/analytics/" title="Statistics Aggregation site">Statistics Aggregation </a> για περισσότερες πληροφορίες.]]></message>
+
+	<!-- Statistics Aggregation Settings Management -->
+	<message key="plugins.generic.statisticsAggregation.manager.settings">Ρυθμίσεις</message>
+	<message key="plugins.generic.statisticsAggregation.manager.statisticsAggregationSettings">Ρυθμίσεις Statistics Aggregation </message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.description"><![CDATA[<p>Με αυτό το plugin ενεργοποιημένο το Statistics Aggregation μπορεί να συλλέξει και να αναλύσει τα στοιχεία χρήσης και κίνησης του ιστοτόπου αυτού του περιοδικού. Σημειώστε ότι αυτό το plugin απαιτεί την ύπαρξη ενός λογαριασμού στο Statistics Aggregation. PΔείτε τον ιστότοπο του <a href="http://www.google.com/analytics/" title="Statistics Aggregation site">Statistics Aggregation </a> για περισσότερες πληροφορίες.</p>]]></message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteId">Αριθμός Λογαριασμού</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdInstructions">Μέσα στο Statistics Aggregation, πατήστε στο Check Status για να δείτε τον κωδικό ανίχνευσης (tracking code) για τον ιστότοπό σας. Ο αριθμός λογαριασμού προβάλλεται μέσα στον κωδικό αυτό : _uacct = "###". Εισάγετ το κείμενο που αντιστοιχεί στο ###.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdRequired">Σας παρακαλούμε εισάγετε έναν αριθμός λογαριασμού.</message>
+
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCode">Tracking code</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCodeRequired">Επιλέξτε ένα tracking code για χρήση.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.urchin">Legacy tracking code (urchin.js)</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.ga">Νέο tracking code (urchin.js)</message>
+</locale>
