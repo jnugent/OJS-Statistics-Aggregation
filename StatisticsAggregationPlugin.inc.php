@@ -115,6 +115,13 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 					$protocol =& Request::getProtocol();
 
 					$statsArray['host'] = $protocol . '://' . Request::getServerHost();
+
+					if (isset($_SERVER['HTTP_REFERER']) && $this->isRemoteReferer($statsArray['host'], $_SERVER['HTTP_REFERER'])) {
+						$statsArray['ref'] = $_SERVER['HTTP_REFERER'];
+					} else {
+						$statsArray['ref'] = '';
+					}
+
 					$statsArray['uri'] =& Request::getRequestPath();
 
 					$jsonString = json_encode($statsArray);
@@ -129,6 +136,20 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 			}
 		}
 		return false;
+	}
+
+	/**
+	 * @brief determines if a referring document is coming from an off-site location.
+	 * @param $docHost the base host of this request (e.g., http://your.journals.site).
+	 * @param $referer the full referring document, if there was one.
+	 * @return boolean true if the referring document has a different base domain.
+	 */
+	function isRemoteReferer($docHost, $referer) {
+		if (!preg_match("{^" . quotemeta($docHost) . "}", $referer)) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
  	/*
