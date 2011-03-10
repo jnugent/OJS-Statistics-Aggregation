@@ -28,14 +28,14 @@ class StatisticsSocket {
 			return false;
 		} else {
 			$content = "POST /index.php/track HTTP/1.1\r\n";
-			$content .= "Host: warhammer.hil.unb.ca\r\n";
+			$content .= "Host: " . $this->socketUrl . "\r\n";
 			$content .= "Content-Type: application/x-www-form-urlencoded\r\n";
 			$content .= "Content-Length: " . strlen($_requestData) . "\r\n\r\n";
 			$content .= $_requestData;
 
 			fwrite($fp, $content);
 			$return = '';
-			while (($buffer = fgets($handle, 1024)) !== false) {
+			while (($buffer = fgets($fp, 1024)) !== false) {
 				$return .= $buffer;
 			}
 
