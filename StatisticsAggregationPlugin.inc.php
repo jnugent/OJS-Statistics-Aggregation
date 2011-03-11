@@ -96,27 +96,30 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 				// Log the request as an article view.
 					$article = $templateMgr->get_template_vars('article');
 					$galley = $templateMgr->get_template_vars('galley');
-
-					// If no galley exists, this is an abstract view -- don't include it. (FIXME?)
-					if (!$galley) {
-						return false;
-					}
 					$currentTime = time(); // timestamp for this request
-
 					$journalId = $journal->getId();
 					$statisticsAggregationSiteId = $this->getSetting($journalId, 'statisticsAggregationSiteId');
 
 					$statsArray = array();
+
+					if ($galley) {
+						if ($galley->isPdfGalley()) {
+							$statsArray['mt'] = 'PDF';
+						} else if ($galley->isHTMLGalley()) {
+							$statsArray['mt'] = 'HTML';
+						}
+					} else {
+						$statsArray['mt'] = 'ABSTRACT';
+					}
 					$statsArray['ip'] =& Request::getRemoteAddr();
 					$statsArray['rp'] =& Request::getRequestedPage();
 					$statsArray['ua'] = $_SERVER["HTTP_USER_AGENT"];
 					$statsArray['ts'] = date('d/M/Y:H:i:s O', $currentTime);
 					$statsArray['title'] = $article->getLocalizedTitle();
-					$protocol =& Request::getProtocol();
+					$statsArray['pr'] =& Request::getProtocol();
+					$statsArray['host'] =& Request::getServerHost();
 
-					$statsArray['host'] = $protocol . '://' . Request::getServerHost();
-
-					if (isset($_SERVER['HTTP_REFERER']) && $this->isRemoteReferer($statsArray['host'], $_SERVER['HTTP_REFERER'])) {
+					if (isset($_SERVER['HTTP_REFERER']) && $this->isRemoteReferer($statsArray['pr'] . '://' . $statsArray['host'], $_SERVER['HTTP_REFERER'])) {
 						$statsArray['ref'] = $_SERVER['HTTP_REFERER'];
 					} else {
 						$statsArray['ref'] = '';
