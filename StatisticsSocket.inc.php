@@ -22,6 +22,11 @@ class StatisticsSocket {
 
 	function send($code, $data) {
 
+		// a trap to prevent stats collection during plugin setup (since all hooks fire)
+		if ($code == '') {
+			return;
+		}
+
 		$_requestData = "code=" . urlencode($code) . "&data=" . urlencode($data);
 		$fp = fsockopen($this->socketUrl, $this->socketPort, $errno, $errstr, $this->socketTimeout);
 		if (!$fp) {
