@@ -89,56 +89,82 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 
 		if (!empty($journal) && ! Request::isBot()) {
 
+			$article = $templateMgr->get_template_vars('article');
+			$galley = $templateMgr->get_template_vars('galley');
+			$journalId = $journal->getId();
+			$statisticsAggregationSiteId = $this->getSetting($journalId, 'statisticsAggregationSiteId');
+
 			switch ($template) {
 				case 'article/article.tpl':
 				case 'article/interstitial.tpl':
 				case 'article/pdfInterstitial.tpl':
 				// Log the request as an article view.
-					$article = $templateMgr->get_template_vars('article');
-					$galley = $templateMgr->get_template_vars('galley');
-					$currentTime = time(); // timestamp for this request
-					$journalId = $journal->getId();
-					$statisticsAggregationSiteId = $this->getSetting($journalId, 'statisticsAggregationSiteId');
-
-					$statsArray = array();
-
-					if ($galley) {
-						if ($galley->isPdfGalley()) {
-							$statsArray['mt'] = 'PDF';
-						} else if ($galley->isHTMLGalley()) {
-							$statsArray['mt'] = 'HTML';
-						}
-					} else {
-						$statsArray['mt'] = 'ABSTRACT';
-					}
-					$statsArray['ip'] =& Request::getRemoteAddr();
-					$statsArray['rp'] =& Request::getRequestedPage();
-					$statsArray['ua'] = $_SERVER["HTTP_USER_AGENT"];
-					$statsArray['ts'] = date('d/M/Y:H:i:s O', $currentTime);
-					$statsArray['title'] = $article->getLocalizedTitle();
-					$statsArray['pr'] =& Request::getProtocol();
-					$statsArray['host'] =& Request::getServerHost();
-
-					if (isset($_SERVER['HTTP_REFERER']) && $this->isRemoteReferer($statsArray['pr'] . '://' . $statsArray['host'], $_SERVER['HTTP_REFERER'])) {
-						$statsArray['ref'] = $_SERVER['HTTP_REFERER'];
-					} else {
-						$statsArray['ref'] = '';
-					}
-
-					$statsArray['uri'] =& Request::getRequestPath();
-
-					$jsonString = json_encode($statsArray);
-					$this->import('StatisticsSocket');
-					$statisticsSocket = new StatisticsSocket();
-					$statisticsSocket->send($statisticsAggregationSiteId, $jsonString);
-
+					$statsArray = $this->buildStatsArray($galley, $article);
+					$this->sendData($statsArray, $statisticsAggregationSiteId);
 				break;
 				default:
-					error_log($template . ' was called but not logged.');
+					$statsArray = $this->buildStatsArray(null, null); // regular page view, no galley or article
+					$this->sendData($statsArray, $statisticsAggregationSiteId);
 				break;
 			}
 		}
 		return false;
+	}
+
+	/**
+	 * @brief encodes the statsArray into JSON and sends it up to the aggregation server through a Socket object.
+	 * @param Array $statsArray the array containing information about the page requested.
+	 * @param String $statisticsAggregationSiteId the Hash Code for this Journal.
+	 */
+	function sendData($statsArray, $statisticsAggregationSiteId) {
+
+		$jsonString = json_encode($statsArray);
+		$this->import('StatisticsSocket');
+		$statisticsSocket = new StatisticsSocket();
+ 		$statisticsSocket->send($statisticsAggregationSiteId, $jsonString);
+	}
+
+	/**
+	 * @brief examines the context of the current request and assembles an array containing the relevant bits of info we want to collect
+	 * @param Object $galley the galley object (HTML or PDF, usually) for this page view, null if a regular non-article page.
+	 * @param Article $article the article object representing the current article being viewed, null if a regular non-article page.
+	 * @return Array $statsArray the array of our information.
+	 */
+	function buildStatsArray($galley, $article) {
+
+		$statsArray = array();
+
+		if ($galley) {
+			if ($galley->isPdfGalley()) {
+				$statsArray['mt'] = 'PDF';
+			} else if ($galley->isHTMLGalley()) {
+				$statsArray['mt'] = 'HTML';
+			}
+		} else if ($article) {
+			$statsArray['mt'] = 'ABSTRACT';
+		} else {
+			$statsArray['mt'] = '';
+		}
+
+		$statsArray['ip'] =& Request::getRemoteAddr();
+		$statsArray['rp'] =& Request::getRequestedPage();
+		$statsArray['ua'] = $_SERVER["HTTP_USER_AGENT"];
+		$statsArray['ts'] = date('d/M/Y:H:i:s O', time());
+		if ($article) {
+			$statsArray['title'] = $article->getLocalizedTitle();
+		} else {
+			$statsArray['title'] = '';
+		}
+		$statsArray['pr'] =& Request::getProtocol();
+		$statsArray['host'] =& Request::getServerHost();
+
+		if (isset($_SERVER['HTTP_REFERER']) && $this->isRemoteReferer($statsArray['pr'] . '://' . $statsArray['host'], $_SERVER['HTTP_REFERER'])) {
+			$statsArray['ref'] = $_SERVER['HTTP_REFERER'];
+		} else {
+			$statsArray['ref'] = '';
+		}
+		$statsArray['uri'] =& Request::getRequestPath();
+		return $statsArray;
 	}
 
 	/**

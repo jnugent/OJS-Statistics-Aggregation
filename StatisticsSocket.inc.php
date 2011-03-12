@@ -35,7 +35,7 @@ class StatisticsSocket {
 
 			fwrite($fp, $content);
 			$return = '';
-			while (($buffer = fgets($fp, 1024)) !== false) {
+			while (($buffer = fgets($fp, 1)) !== false) {
 				$return .= $buffer;
 			}
 
