@@ -2,3 +2,10 @@ Follow the steps for installing a plugin as they are described at http://pkp.sfu
 
 It may be beneficial to create a tar.gz of this plugin and use the web tool for installing it.  
 Otherwise, you will need to insert the correct reference into the versions table.
+
+Alternatively, you may download a version of the plugin here:
+
+http://etcdev.hil.unb.ca/jason/statisticsAggregator.tar.gz
+
+It requires the latest version of OJS in order to function, and preferably a reasonably recent version
+of PHP.
