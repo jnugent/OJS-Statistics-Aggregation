@@ -26,7 +26,7 @@
 		
 		function getHashCode() {ldelim}
 		
-			if ($('#statisticsAggregationSiteEmail').attr('value') != '') {ldelim}
+			if ($('#statisticsAggregationSiteEmail').attr('value') != '' && ($('#statisticsAggregationSiteEmail').attr('value') == $('#statisticsAggregationSiteEmailConfirm').attr('value'))) {ldelim}
 				$.ajax ( 
 					{ldelim}
 						type: "POST",
@@ -53,6 +53,11 @@
 	<tr valign="top">
 		<td width="30%" class="label">{fieldLabel name="statisticsAggregationSiteEmail" required="true" key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmail"}</td>
 		<td width="70%" class="value"><input type="text" name="statisticsAggregationSiteEmail" id="statisticsAggregationSiteEmail" value="{$statisticsAggregationSiteEmail|escape}" size="32" maxlength="150" class="textField" />
+	</td>
+	</tr>
+	<tr valign="top">
+		<td width="30%" class="label">{fieldLabel name="statisticsAggregationSiteEmailConfirm" required="true" key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmailConfirm"}</td>
+		<td width="70%" class="value"><input type="text" name="statisticsAggregationSiteEmailConfirm" id="statisticsAggregationSiteEmailConfirm" value="{$statisticsAggregationSiteEmailConfirm|escape}" size="32" maxlength="150" class="textField" />
 	</td>
 	</tr>
 	<tr valign="top">
