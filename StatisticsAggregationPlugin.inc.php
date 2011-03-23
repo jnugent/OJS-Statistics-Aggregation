@@ -104,9 +104,7 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 				break;
 				default:
 					$statsArray = $this->buildStatsArray(null, null); // regular page view, no galley or article
-					if ($statsArray['rp'] != 'manager') { // do not accumulate stats for journal management pages
-						$this->sendData($statsArray, $statisticsAggregationSiteId);
-					}
+					$this->sendData($statsArray, $statisticsAggregationSiteId);
 				break;
 			}
 		}
@@ -120,7 +118,9 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 	 */
 	function sendData($statsArray, $statisticsAggregationSiteId) {
 
-		$jsonString = json_encode($statsArray);
+		import('classes.core.JSON');
+		$json = new JSON();
+		$jsonString = $json->json_encode($statsArray);
 		$this->import('StatisticsSocket');
 		$statisticsSocket = new StatisticsSocket();
  		$statisticsSocket->send($statisticsAggregationSiteId, $jsonString);
