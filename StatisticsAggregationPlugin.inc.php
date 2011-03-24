@@ -104,7 +104,9 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 				break;
 				default:
 					$statsArray = $this->buildStatsArray(null, null); // regular page view, no galley or article
-					$this->sendData($statsArray, $statisticsAggregationSiteId);
+					if ($statsArray['rp'] != 'manager') { // do not accumulate stats for journal management pages
+						$this->sendData($statsArray, $statisticsAggregationSiteId);
+					}
 				break;
 			}
 		}
