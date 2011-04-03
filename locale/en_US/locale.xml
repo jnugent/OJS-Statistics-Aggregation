@@ -31,8 +31,4 @@
 	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmailConfirmRequired">Please confirm your email address.</message>
 	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCode">Tracking code</message>
 	<message key="plugins.generic.statisticsAggregation.manager.settings.getButtonLabel">Get number</message>
-	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCodeRequired">Please select a tracking code to use.</message>
-	<message key="plugins.generic.statisticsAggregation.authorAccount">Statistics Aggregation account number</message>
-	<message key="plugins.generic.statisticsAggregation.authorAccount.description">To track published article readership using Statistics Aggregation, enter an account number here (e.g. UA-xxxxxx-x).</message>
-	<message key="plugins.generic.statisticsAggregation.authorAccountInvalid">One or more Statistics Aggregation account numbers entered for submission authors are not valid.</message>
 </locale>
