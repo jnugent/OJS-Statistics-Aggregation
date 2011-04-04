@@ -15,20 +15,20 @@
 <locale name="fr_CA" full_name="Français (Canada)">
 
 	<!-- Statistics Aggregation -->
-	<message key="plugins.generic.statisticsAggregation.displayName">Statistics Aggregation Plugin</message>
-	<message key="plugins.generic.statisticsAggregation.description"><![CDATA[Integrate OJS with Statistics Aggregation.]]></message>
+	<message key="plugins.generic.statisticsAggregation.displayName">Plugiciel d'agrégation de statistiques</message>
+	<message key="plugins.generic.statisticsAggregation.description"><![CDATA[Intégrer l'agrégation de statistiques dans OJS.]]></message>
 
 	<!-- Statistics Aggregation Settings Management -->
-	<message key="plugins.generic.statisticsAggregation.manager.settings">Settings</message>
-	<message key="plugins.generic.statisticsAggregation.manager.statisticsAggregationSettings">Statistics Aggregation Settings</message>
-	<message key="plugins.generic.statisticsAggregation.manager.settings.description"><![CDATA[<p>With this plugin enabled Statistics Aggregation may be used to collect and analyze web site usage and traffic for this journal. </p>]]>
+	<message key="plugins.generic.statisticsAggregation.manager.settings">Configuration</message>
+	<message key="plugins.generic.statisticsAggregation.manager.statisticsAggregationSettings">Configuration de l'agrégation de statistiques</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.description"><![CDATA[<p>L'activation de ce plugiciel permet de recueillir et d'analyser les données de consultation web de cette revue.</p>]]>
 </message>
-	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteId">Account number</message>
-	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmail">Account Email (for your login)</message>
-	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmailConfirm">Confirm Email</message>
-	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdRequired">Please enter an account number.</message>
-	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmailRequired">Please enter an email address and confirm it.</message>
-	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmailConfirmRequired">Please confirm your email address.</message>
-	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCode">Tracking code</message>
-	<message key="plugins.generic.statisticsAggregation.manager.settings.getButtonLabel">Get number</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteId">Numéro de compte</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmail">Adresse de courriel du compte (pour la connexion)</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmailConfirm">Courriel de confirmation</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdRequired">Entrez un numéro de compte</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmailRequired">Veuillez entrer une adresse de courriel et la confirmer.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmailConfirmRequired">Veuillez confirmer votre adresse de courriel.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCode">Code de suivi</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.getButtonLabel">Obtenir le code</message>
 </locale>

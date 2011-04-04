@@ -30,5 +30,5 @@
 	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmailRequired">Please enter an email address and confirm it.</message>
 	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmailConfirmRequired">Please confirm your email address.</message>
 	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCode">Tracking code</message>
-	<message key="plugins.generic.statisticsAggregation.manager.settings.getButtonLabel">Get number</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.getButtonLabel">Fetch Code</message>
 </locale>
