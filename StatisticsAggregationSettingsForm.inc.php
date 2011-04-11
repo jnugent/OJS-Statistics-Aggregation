@@ -50,7 +50,8 @@ class StatisticsAggregationSettingsForm extends Form {
 
 		$this->_data = array(
 			'statisticsAggregationSiteId' => $plugin->getSetting($journalId, 'statisticsAggregationSiteId'),
-			'statisticsAggregationSiteEmail' => $plugin->getSetting($journalId, 'statisticsAggregationSiteEmail')
+			'statisticsAggregationSiteEmail' => $plugin->getSetting($journalId, 'statisticsAggregationSiteEmail'),
+			'statisticsAggregationSiteEmailConfirm' => $plugin->getSetting($journalId, 'statisticsAggregationSiteEmailConfirm')
 		);
 	}
 
@@ -58,7 +59,7 @@ class StatisticsAggregationSettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('statisticsAggregationSiteId', 'statisticsAggregationSiteEmail'));
+		$this->readUserVars(array('statisticsAggregationSiteId', 'statisticsAggregationSiteEmail', 'statisticsAggregationSiteEmailConfirm'));
 	}
 
 	/**
