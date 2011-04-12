@@ -20,6 +20,7 @@
 
 	<!-- Statistics Aggregation Settings Management -->
 	<message key="plugins.generic.statisticsAggregation.manager.settings">Configuration</message>
+	<message key="plugins.generic.statisticsAggregation.manager.viewstats">Regardez Statistiques</message>
 	<message key="plugins.generic.statisticsAggregation.manager.statisticsAggregationSettings">Configuration de l'agrégation de statistiques</message>
 	<message key="plugins.generic.statisticsAggregation.manager.settings.description"><![CDATA[<p>L'activation de ce plugiciel permet de recueillir et d'analyser les données de consultation web de cette revue.</p>]]>
 </message>

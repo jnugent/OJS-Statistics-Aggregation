@@ -73,6 +73,7 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 		$verbs = array();
 		if ($this->getEnabled()) {
 			$verbs[] = array('settings', Locale::translate('plugins.generic.statisticsAggregation.manager.settings'));
+			$verbs[] = array('viewstats', Locale::translate('plugins.generic.statisticsAggregation.manager.viewstats') );
 		}
 		return parent::getManagementVerbs($verbs);
 	}
@@ -234,6 +235,9 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 					$form->initData();
 					$form->display();
 				}
+				return true;
+			case 'viewstats':
+				Request::redirectUrl('http://warhammer.hil.unb.ca/');
 				return true;
 			default:
 				// Unknown management verb
