@@ -157,6 +157,7 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 		$statsArray['ts'] = date('d/M/Y:H:i:s O', time());
 		if ($article) {
 			$statsArray['title'] = $article->getLocalizedTitle();
+			$statsArray['authors'] = $article->getAuthorString();
 		} else {
 			$statsArray['title'] = '';
 		}
@@ -201,9 +202,11 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 			case 'getNewHash':
 				$emailAddress = Request::getUserVar('email');
 				$journal =& Request::getJournal();
-				$journalTitle = $journal->getLocalizedTitle();
+				$journalTitle =& $journal->getLocalizedTitle();
+				$primaryLocale =& $journal->getPrimaryLocale();
+
 				if ($emailAddress != '')  {
-					$jsonResult = file_get_contents('http://warhammer.hil.unb.ca/index.php/getNewHash/0/' . urlencode($emailAddress) . '/' . urlencode($journalTitle));
+					$jsonResult = file_get_contents('http://warhammer.hil.unb.ca/index.php/getNewHash/0/' . urlencode($emailAddress) . '/' . urlencode($journalTitle) . '/' . urlencode($primaryLocale));
 					echo $jsonResult;
 					return true;
 				} else {
