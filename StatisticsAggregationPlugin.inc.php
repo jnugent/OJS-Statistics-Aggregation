@@ -92,8 +92,7 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 
 			$article = $templateMgr->get_template_vars('article');
 			$galley = $templateMgr->get_template_vars('galley');
-			$journalId = $journal->getId();
-			$statisticsAggregationSiteId = $this->getSetting($journalId, 'statisticsAggregationSiteId');
+			$statisticsAggregationSiteId = $this->getSetting($journal->getId(), 'statisticsAggregationSiteId');
 
 			switch ($template) {
 				case 'article/article.tpl':
@@ -198,11 +197,12 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 	function manage($verb, $args, &$message) {
 		if (!parent::manage($verb, $args, $message)) return false;
 
+		$journal =& Request::getJournal();
+
 		switch ($verb) {
 
 			case 'getNewHash':
 				$emailAddress = Request::getUserVar('email');
-				$journal =& Request::getJournal();
 				$journalTitle =& $journal->getLocalizedTitle();
 				$primaryLocale =& $journal->getPrimaryLocale();
 
@@ -216,7 +216,6 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 			case 'settings':
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-				$journal =& Request::getJournal();
 
 				$this->import('StatisticsAggregationSettingsForm');
 				$form = new StatisticsAggregationSettingsForm($this, $journal->getId());
@@ -237,7 +236,8 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 				}
 				return true;
 			case 'viewstats':
-				Request::redirectUrl('http://warhammer.hil.unb.ca/');
+				$statisticsAggregationSiteId = $this->getSetting($journal->getId(), 'statisticsAggregationSiteId');
+				Request::redirectUrl('http://warhammer.hil.unb.ca/stats/' . $statisticsAggregationSiteId);
 				return true;
 			default:
 				// Unknown management verb
