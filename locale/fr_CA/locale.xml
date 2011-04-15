@@ -30,6 +30,7 @@
 	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdRequired">Entrez un numéro de compte</message>
 	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmailRequired">Veuillez entrer une adresse de courriel et la confirmer.</message>
 	<message key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmailConfirmRequired">Veuillez confirmer votre adresse de courriel.</message>
+	<message key="plugins.generic.statisticsAggregation.manager.settings.emailsMustMatch">Les deux addresses de courriel doit correspondre.</message>
 	<message key="plugins.generic.statisticsAggregation.manager.settings.trackingCode">Code de suivi</message>
 	<message key="plugins.generic.statisticsAggregation.manager.settings.getButtonLabel">Obtenir le code</message>
 </locale>

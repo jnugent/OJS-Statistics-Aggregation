@@ -39,6 +39,7 @@ class StatisticsAggregationSettingsForm extends Form {
 		$this->addCheck(new FormValidator($this, 'statisticsAggregationSiteId', 'required', 'plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteIdRequired'));
 		$this->addCheck(new FormValidatorEmail($this, 'statisticsAggregationSiteEmail', 'required', 'plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmailRequired'));
 		$this->addCheck(new FormValidatorEmail($this, 'statisticsAggregationSiteEmailConfirm', 'required', 'plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteEmailConfirmRequired'));
+		$this->addCheck(new FormValidatorInSet($this, 'statisticsAggregationSiteEmailConfirm', 'required', 'plugins.generic.statisticsAggregation.manager.settings.emailsMustMatch', array(Request::getUserVar('statisticsAggregationSiteEmail'))));
 	}
 
 	/**
