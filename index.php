@@ -17,7 +17,6 @@
 
 // $Id$
 
-
 require_once('StatisticsAggregationPlugin.inc.php');
 
 return new StatisticsAggregationPlugin();
