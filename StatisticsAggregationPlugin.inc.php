@@ -79,7 +79,7 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Insert Statistics Aggregation page tag to footer
+	 * build the statistics
 	 */
 	function callbackInsertSA($hookName, $params) {
 
@@ -238,7 +238,9 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 				return true;
 			case 'viewstats':
 				$statisticsAggregationSiteId = $this->getSetting($journal->getId(), 'statisticsAggregationSiteId');
-				Request::redirectUrl('http://warhammer.hil.unb.ca/stats/' . $statisticsAggregationSiteId);
+				if ($statisticsAggregationSiteId != '') {
+					Request::redirectUrl('http://warhammer.hil.unb.ca/stats/' . $statisticsAggregationSiteId);
+				}
 				return true;
 			default:
 				// Unknown management verb
