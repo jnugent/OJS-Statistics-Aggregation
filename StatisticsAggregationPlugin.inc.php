@@ -86,7 +86,6 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 		$templateMgr =& $params[0];
 		$template =& $params[1];
 		$journal =& Request::getJournal();
-		$session =& Request::getSession();
 
 		if (!empty($journal) && ! Request::isBot()) {
 
@@ -104,7 +103,7 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 				break;
 				default:
 					$statsArray = $this->buildStatsArray(null, null); // regular page view, no galley or article
-					if ($statsArray['rp'] != 'manager') { // do not accumulate stats for journal management pages
+					if ($statsArray['rp'] != 'manager' && $template != 'rt/rt.tpl') { // do not accumulate stats for journal management pages or research tool bar
 						$this->sendData($statsArray, $statisticsAggregationSiteId);
 					}
 				break;
@@ -205,6 +204,8 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 				$emailAddress = Request::getUserVar('email');
 				$journalTitle =& $journal->getLocalizedTitle();
 				$primaryLocale =& $journal->getPrimaryLocale();
+
+				$journalTitle = preg_replace("{/}", " ", $journalTitle);
 
 				if ($emailAddress != '')  {
 					$jsonResult = file_get_contents('http://warhammer.hil.unb.ca/index.php/getNewHash/0/' . urlencode($emailAddress) . '/' . urlencode($journalTitle) . '/' . urlencode($primaryLocale));

@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_generic_statisticsAggregation
  */
- 
+
 /**
  * @file plugins/generic/statisticsAggregation/index.php
  *
