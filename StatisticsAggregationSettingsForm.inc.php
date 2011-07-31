@@ -31,7 +31,7 @@ class StatisticsAggregationSettingsForm extends Form {
 	 * @param $journalId int
 	 */
 	function StatisticsAggregationSettingsForm(&$plugin, $journalId) {
-		$this->journalId = $journalId;
+		$this->journalId =& $journalId;
 		$this->plugin =& $plugin;
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
@@ -46,13 +46,13 @@ class StatisticsAggregationSettingsForm extends Form {
 	 * Initialize form data.
 	 */
 	function initData() {
-		$journalId = $this->journalId;
+
 		$plugin =& $this->plugin;
 
 		$this->_data = array(
-			'statisticsAggregationSiteId' => $plugin->getSetting($journalId, 'statisticsAggregationSiteId'),
-			'statisticsAggregationSiteEmail' => $plugin->getSetting($journalId, 'statisticsAggregationSiteEmail'),
-			'statisticsAggregationSiteEmailConfirm' => $plugin->getSetting($journalId, 'statisticsAggregationSiteEmailConfirm')
+			'statisticsAggregationSiteId' => $plugin->getSetting($this->journalId, 'statisticsAggregationSiteId'),
+			'statisticsAggregationSiteEmail' => $plugin->getSetting($this->journalId, 'statisticsAggregationSiteEmail'),
+			'statisticsAggregationSiteEmailConfirm' => $plugin->getSetting($this->journalId, 'statisticsAggregationSiteEmailConfirm')
 		);
 	}
 
@@ -68,10 +68,9 @@ class StatisticsAggregationSettingsForm extends Form {
 	 */
 	function execute() {
 		$plugin =& $this->plugin;
-		$journalId = $this->journalId;
 
-		$plugin->updateSetting($journalId, 'statisticsAggregationSiteId', trim($this->getData('statisticsAggregationSiteId'), "\"\';"), 'string');
-		$plugin->updateSetting($journalId, 'statisticsAggregationSiteEmail', trim($this->getData('statisticsAggregationSiteEmail'), "\"\';"), 'string');
+		$plugin->updateSetting($this->journalId, 'statisticsAggregationSiteId', trim($this->getData('statisticsAggregationSiteId'), "\"\';"), 'string');
+		$plugin->updateSetting($this->journalId, 'statisticsAggregationSiteEmail', trim($this->getData('statisticsAggregationSiteEmail'), "\"\';"), 'string');
 	}
 }
 
