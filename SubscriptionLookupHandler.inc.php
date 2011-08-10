@@ -128,6 +128,9 @@ class SubscriptionLookupHandler extends Handler {
 
 				exit(0);
 			}
+		} else {
+			error_log("No XML document retrieved.  Exiting.");
+			exit(0);
 		}
 	}
 }

@@ -52,7 +52,8 @@ class StatisticsAggregationSettingsForm extends Form {
 		$this->_data = array(
 			'statisticsAggregationSiteId' => $plugin->getSetting($this->journalId, 'statisticsAggregationSiteId'),
 			'statisticsAggregationSiteEmail' => $plugin->getSetting($this->journalId, 'statisticsAggregationSiteEmail'),
-			'statisticsAggregationSiteEmailConfirm' => $plugin->getSetting($this->journalId, 'statisticsAggregationSiteEmailConfirm')
+			'statisticsAggregationSiteEmailConfirm' => $plugin->getSetting($this->journalId, 'statisticsAggregationSiteEmailConfirm'),
+			'disableForm' => ($plugin->getSetting($this->journalId, 'statisticsAggregationSiteId') != '') ? true : false
 		);
 	}
 

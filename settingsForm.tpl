@@ -62,8 +62,8 @@
 	</tr>
 	<tr valign="top">
 		<td width="30%" class="label">{fieldLabel name="statisticsAggregationSiteId" required="true" key="plugins.generic.statisticsAggregation.manager.settings.statisticsAggregationSiteId"}</td>
-		<td width="70%" class="value"><input type="text" name="statisticsAggregationSiteId" id="statisticsAggregationSiteId" value="{$statisticsAggregationSiteId|escape}" size="32" maxlength="32" class="textField" />
-		<input type="button" class="button" id="statisticsAggregationFetchButton" value="{translate key="plugins.generic.statisticsAggregation.manager.settings.getButtonLabel"}" onclick="getHashCode()"/>
+		<td width="70%" class="value"><input type="text" name="statisticsAggregationSiteId" id="statisticsAggregationSiteId" value="{$statisticsAggregationSiteId|escape}" size="32" maxlength="32" class="textField" {if $disableForm }disabled="disabled"{/if} />
+		<input type="button" class="button" {if $disableForm }disabled="disabled"{/if} id="statisticsAggregationFetchButton" value="{translate key="plugins.generic.statisticsAggregation.manager.settings.getButtonLabel"}" onclick="getHashCode()"/>
 	</td>
 	</tr>
 </table>
