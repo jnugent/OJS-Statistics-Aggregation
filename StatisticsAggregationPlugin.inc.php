@@ -72,6 +72,7 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 	 */
 	function getManagementVerbs() {
 		$verbs = array();
+		$verbs[] = array('readme', Locale::translate('plugins.generic.statisticsAggregation.manager.readme'));
 		if ($this->getEnabled()) {
 			$verbs[] = array('settings', Locale::translate('plugins.generic.statisticsAggregation.manager.settings'));
 			$verbs[] = array('viewstats', Locale::translate('plugins.generic.statisticsAggregation.manager.viewstats') );
@@ -303,8 +304,11 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 			case 'viewstats':
 				$statisticsAggregationSiteId = $this->getSetting($journal->getId(), 'statisticsAggregationSiteId');
 				if ($statisticsAggregationSiteId != '') {
-					Request::redirectUrl('http://warhammer.hil.unb.ca/stats/' . $statisticsAggregationSiteId . '/landing.php');
+					Request::redirectUrl('http://warhammer.hil.unb.ca/stats/' . $statisticsAggregationSiteId);
 				}
+				return true;
+			case 'readme':
+				Request::redirectUrl('http://warhammer.hil.unb.ca/readme.html');
 				return true;
 			default:
 				// Unknown management verb
