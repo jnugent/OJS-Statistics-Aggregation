@@ -1,20 +1,19 @@
 <?php
 
 /**
- * @file SubscriptionLookupHandler.inc.php
+ * @file StatisticsAggregationPageHandler.inc.php
  *
  * Copyright (c) 2003-2010 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins.generic.statisticsAggregator
- * @class SubscriptionLookupHandler
+ * @class StatisticsAggregationPageHandler
  *
- * Look up subscription information based on a given IP address
- *
+ * Handle page requests for the Plugin 
  */
 import('classes.handler.Handler');
 
-class SubscriptionLookupHandler extends Handler {
+class StatisticsAggregationPageHandler extends Handler {
 
 	function index($args) {
 		return true;

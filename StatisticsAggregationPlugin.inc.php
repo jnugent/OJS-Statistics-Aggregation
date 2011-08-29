@@ -75,7 +75,6 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 		$verbs[] = array('readme', Locale::translate('plugins.generic.statisticsAggregation.manager.readme'));
 		if ($this->getEnabled()) {
 			$verbs[] = array('settings', Locale::translate('plugins.generic.statisticsAggregation.manager.settings'));
-			$verbs[] = array('viewstats', Locale::translate('plugins.generic.statisticsAggregation.manager.viewstats') );
 		}
 		return parent::getManagementVerbs($verbs);
 	}
@@ -127,9 +126,9 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 
 		if ($page == 'sa' && $op == 'lookup') {
 
-			define('HANDLER_CLASS', 'SubscriptionLookupHandler');
+			define('HANDLER_CLASS', 'StatisticsAggregationPageHandler');
 			define('STATS_AGGR_PLUGIN_NAME', $this->getName());
-			$this->import('SubscriptionLookupHandler');
+			$this->import('StatisticsAggregationPageHandler');
 			return true;
 		}
 		return false;
@@ -299,12 +298,6 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 					$this->setBreadCrumbs(true);
 					$form->initData();
 					$form->display();
-				}
-				return true;
-			case 'viewstats':
-				$statisticsAggregationSiteId = $this->getSetting($journal->getId(), 'statisticsAggregationSiteId');
-				if ($statisticsAggregationSiteId != '') {
-					Request::redirectUrl('http://warhammer.hil.unb.ca/stats/' . $statisticsAggregationSiteId);
 				}
 				return true;
 			case 'readme':

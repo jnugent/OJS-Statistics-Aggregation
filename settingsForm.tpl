@@ -14,12 +14,15 @@
 {/strip}
 <div id="statisticsAggregationSettings">
 <div id="description">{translate key="plugins.generic.statisticsAggregation.manager.settings.description"}</div>
+{if $statisticsAggregationSiteId != ''}
+	<p><a href="http://warhammer.hil.unb.ca/stats/{$statisticsAggregationSiteId|escape}/landing.php" target="_blank">{translate key="plugins.generic.statisticsAggregation.manager.viewstats" }</a></p>
+{/if}
 
 <div class="separator"></div>
 
 <br />
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 
 <script>
 	<!--

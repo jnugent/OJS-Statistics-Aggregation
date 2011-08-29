@@ -20,7 +20,7 @@
 
 	<!-- Statistics Aggregation Settings Management -->
 	<message key="plugins.generic.statisticsAggregation.manager.settings">Settings</message>
-	<message key="plugins.generic.statisticsAggregation.manager.viewstats">View Stats</message>
+	<message key="plugins.generic.statisticsAggregation.manager.viewstats">View your journal statistics</message>
 	<message key="plugins.generic.statisticsAggregation.manager.readme">Instructions</message>
 	<message key="plugins.generic.statisticsAggregation.manager.statisticsAggregationSettings">Statistics Aggregation Settings</message>
 	<message key="plugins.generic.statisticsAggregation.manager.settings.description"><![CDATA[<p>With this plugin enabled Statistics Aggregation may be used to collect and analyze web site usage and traffic for this journal. </p>]]>
