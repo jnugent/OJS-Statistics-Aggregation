@@ -25,7 +25,7 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 	 * 	the plugin will not be registered.
 	 */
 	function register($category, $path) {
-		if (parent::register($category, $path)) {
+		if (parent::register($category, $path) && $this->getEnabled()) {
 			HookRegistry::register('TemplateManager::display', array(&$this, 'callbackSendStatistics'));
 			HookRegistry::register('LoadHandler', array(&$this, 'callbackLoadHandler'));
 			return true;
