@@ -19,8 +19,25 @@ class StatisticsSocket {
 	var $socketUrl = 'warhammer.hil.unb.ca';
 	var $socketPort = 80;
 	var $socketTimeout = 10;
+	var $_statisticsAggregationSiteId;
+	var $_jsonString;
 
-	function send($code, $data) {
+	function StatisticsSocket() {
+	        register_shutdown_function(array($this, 'send'));
+	}
+
+	function setSiteId($id) {
+		$this->_statisticsAggregationSiteId = $id;
+	}
+
+	function setJSONString($jsonString) {
+		$this->_jsonString = $jsonString;
+	}
+
+	function send() {
+
+		$code = $this->_statisticsAggregationSiteId;
+		$data = $this->_jsonString;
 
 		// a trap to prevent stats collection during plugin setup (since all hooks fire)
 		if ($code == '') {
