@@ -18,7 +18,7 @@ class StatisticsSocket {
 
 	var $socketUrl = 'warhammer.hil.unb.ca';
 	var $socketPort = 80;
-	var $socketTimeout = 30;
+	var $socketTimeout = 10;
 
 	function send($code, $data) {
 
