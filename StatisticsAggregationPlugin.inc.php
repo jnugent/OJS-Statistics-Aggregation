@@ -322,7 +322,7 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 		$journal =& Request::getJournal();
 		$statisticsAggregationSiteId = $this->getSetting($journal->getId(), 'statisticsAggregationSiteId');
 		if ($statisticsAggregationSiteId != '') {
-			$output .= '<li>&#187; <a href="http://warhammer.hil.unb.ca/' . $statisticsAggregationSiteId . '/landing.php" target="_blank">' . 
+			$output .= '<li>&#187; <a href="http://warhammer.hil.unb.ca/stats/' . $statisticsAggregationSiteId . '/landing.php" target="_blank">' . 
 					Locale::translate('plugins.generic.statisticsAggregation.manager.viewstats') . '</a></li>';
 		}
 		return false;
