@@ -37,11 +37,11 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.statisticsAggregation.displayName');
+		return __('plugins.generic.statisticsAggregation.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.generic.statisticsAggregation.description');
+		return __('plugins.generic.statisticsAggregation.description');
 	}
 
 	/**
@@ -74,9 +74,9 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 	 */
 	function getManagementVerbs() {
 		$verbs = array();
-		$verbs[] = array('readme', Locale::translate('plugins.generic.statisticsAggregation.manager.readme'));
+		$verbs[] = array('readme', __('plugins.generic.statisticsAggregation.manager.readme'));
 		if ($this->getEnabled()) {
-			$verbs[] = array('settings', Locale::translate('plugins.generic.statisticsAggregation.manager.settings'));
+			$verbs[] = array('settings', __('plugins.generic.statisticsAggregation.manager.settings'));
 		}
 		return parent::getManagementVerbs($verbs);
 	}
@@ -323,7 +323,7 @@ class StatisticsAggregationPlugin extends GenericPlugin {
 		$statisticsAggregationSiteId = $this->getSetting($journal->getId(), 'statisticsAggregationSiteId');
 		if ($statisticsAggregationSiteId != '') {
 			$output .= '<li>&#187; <a href="http://warhammer.hil.unb.ca/stats/' . $statisticsAggregationSiteId . '/landing.php" target="_blank">' . 
-					Locale::translate('plugins.generic.statisticsAggregation.manager.viewstats') . '</a></li>';
+					__('plugins.generic.statisticsAggregation.manager.viewstats') . '</a></li>';
 		}
 		return false;
 	}
